@@ -1,52 +1,30 @@
 <template>
   <section class="section">
-    <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github"
-      >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
+    <div class="columns is-desktop is-3">
+      <b-select placeholder="# of People">
+        <option
+          v-for="option in [
+            { id: 1, label: '1 Person' },
+            { id: 2, label: '2 People' },
+            { id: 3, label: '3 People' },
+            { id: 4, label: '4 People' },
+            { id: 5, label: '5 People' },
+          ]"
+          :value="option.id"
+          :key="option.id"
+        >
+          {{ option.label }}
+        </option>
+      </b-select>
 
-      <card
-        title="Responsive"
-        icon="cellphone-link"
-      >
-        <b class="has-text-grey">
-          Every
-        </b> component is responsive
-      </card>
-
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">
-          Vue.js
-        </a> and <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
+      <b-datepicker placeholder="Dates" v-model="dates" range> </b-datepicker>
+      <b-button active>Search</b-button>
     </div>
   </section>
 </template>
 
 <script>
-import Card from '~/components/Card'
-
 export default {
-  name: 'IndexPage',
-  components: {
-    Card
-  }
+  name: 'IndexPage'
 }
 </script>

@@ -7,12 +7,8 @@
         </p>
       </header>
       <div class="card-content">
-        <div class="content has-text-centered">
-          <b-icon
-            :icon="icon"
-            size="is-large"
-            type="is-primary"
-          />
+        <div class="content">
+          <slot name="content"></slot>
         </div>
       </div>
       <footer class="card-footer">

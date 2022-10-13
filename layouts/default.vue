@@ -11,8 +11,8 @@
           href="/"
         >
           <img
-            src="~assets/buefy.png"
-            alt="Buefy"
+            src="~assets/reserveme.png"
+            alt="Reservation"
             height="28"
           >
         </a>
@@ -28,7 +28,6 @@
     <section class="main-content columns">
       <aside class="column is-2 section">
         <p class="menu-label is-hidden-touch">
-          General
         </p>
         <ul class="menu-list">
           <li
@@ -58,16 +57,27 @@ export default {
   data () {
     return {
       items: [
+        
         {
-          title: 'Home',
-          icon: 'home',
+          title: 'Index',
+          icon: 'alpha-r-box-outline',
           to: { name: 'index' }
+        },
+        {
+          title: 'Reservations',
+          icon: 'alpha-r-box-outline',
+          to: { name: 'reservation' }
         },
         {
           title: 'Inspire',
           icon: 'lightbulb',
           to: { name: 'inspire' }
-        }
+        },
+        {
+          title: 'Settings',
+          icon: 'cog',
+          to: { name: 'settings' }
+        },
       ]
     }
   }
